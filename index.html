@@ -15,24 +15,32 @@
 
     <title>Nucamp: A Better Way To Camp</title>
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="container">
             <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" >
+                </div>
                 <div class="col">
                     <h1>Nucamp</h1>
                     <h2>A Better Way to Camp</h2>
+                </div>
+                <div class="col-md-4 col-xl-2 col-xs mt-4 align-content-center">
+                    <button type="button" class="btn btn-info"><a class="text-light" style="text-decoration: none;"
+                            href="#reserveForm">Reserve Campsite</a></button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- navbar -->
-
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
@@ -51,35 +59,92 @@
 
         <!-- discover section -->
         <section class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3 order-sm-last">
+            <div class="col sm-4 col md-3 align-content-center order-last">
                 <h2 class="text-sm-end">Discover & Review</h2>
             </div>
-            <div class="col">
+            <div class="col col-xs-12">
+                <img class="me-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="breadcrumbTrail">
+            </div>
+            <div class="col col-xs-12 align-self-center">
                 <h3>Our Campsites</h3>
-                <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+                <p class="d-none d-sm-block">
+                    Explore our growing database of curated campsites and leave your own
+                    reviews!
+                </p>
             </div>
         </section>
 
         <!-- feature section -->
         <section class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
+            <div class="col-xs-12 sm-4 col md-3 align-content-center">
                 <h2>Featured Campsites</h2>
             </div>
-            <div class="col">
+            <div class="col col-xs-12 align-self-center">
                 <h3>React Lake Campground</h3>
-                <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <p class="d-none d-sm-block">
+                    Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <img class="float-end img-thumbnail" src="img/react-lake-thumb.jpg" alt="breadcrumbTrail">
             </div>
         </section>
 
         <!-- partner section -->
         <section class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3 order-sm-last">
+            <div class="col sm-4 col md-3 align-content-center order-last">
                 <h2 class="text-sm-end">Our Community Partners</h2>
             </div>
-            <div class="col">
-                <h3>Bootstrap Outfitters</h3>
-                <p>Bootstrap Outfitters supplies you with gear you need at prices you cant't beat.</p>
+            <div class="col col-xs-12">
+                <img class="me-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
             </div>
+            <div class="col col-xs-12 align-self-center">
+                <h3>Bootstrap Outfitters</h3>
+                <p class="d-none d-sm-block">
+                    Bootstrap Outfitters supplies you with gear you need at prices you cant't beat.
+                </p>       
+            </div>    
+            
+        </section>
+
+        <section class="row row-content">
+            <div class="col-sm-9 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-light">Reserve a Campsite</h3>
+                    <div class="card-body ">
+                        <form id="reserveForm">
+                            <div class="row mb-3">
+                                <div class="col-sm-6 col-xs col-form-label">
+                                    <label for="numberofcampers">Number Of Campers</label>
+                                </div>
+                                <div class="col-sm-6 col-xs">
+                                    <select name="numberofcampers" class="form-control" id="numberofcampers">
+                                        <option value="select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-6 col-form-label">
+                                    <label for="date">Date</label>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
         </section>
 
     </main>
@@ -91,10 +156,10 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
                         <li><a href="#">Sites</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-5 text-center">
