@@ -106,50 +106,50 @@
 
     <!-- reserve campsite modal -->
 
-    <div class="modal" id="reserveModal" tabindex="-1">
+    <div class="modal fade" id="reserveModal">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header bg-info text-white">
-              <h5 class="modal-title">Reserve a Campsite</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
-                        <div class="row mb-3">
-                            <div class="col-sm-6 col-xs col-form-label">
-                                <label for="numberofcampers">Number Of Campers</label>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                            <div class="row mb-3">
+                                <div class="col-sm-6 col-xs col-form-label">
+                                    <label for="numberofcampers">Number Of Campers</label>
+                                </div>
+                                <div class="col-sm-6 col-xs">
+                                    <select name="numberofcampers" class="form-control" id="numberofcampers">
+                                        <option value="select">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm-6 col-xs">
-                                <select name="numberofcampers" class="form-control" id="numberofcampers">
-                                    <option value="select">Select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
+                            <div class="row mb-3">
+                                <div class="col-sm-6 col-form-label">
+                                    <label for="date">Date</label>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="mm/dd/yyyy">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-sm-6 col-form-label">
-                                <label for="date">Date</label>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
                             </div>
-                            <div class="col-sm-6 ">
-                                <input type="date" class="form-control" id="date" name="date" placeholder="mm/dd/yyyy">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <button class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
-                                <button class="btn btn-primary" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
     </div>
 
@@ -247,9 +247,25 @@
                 <p class="d-none d-sm-block">
                     Bootstrap Outfitters supplies you with gear you need at prices you cant't beat.
                 </p>       
-            </div>    
-            
+            </div>  
         </section>
+
+        <!-- new section camp review -->
+        <section class="row row-content align-items-start review-section mb-3">
+            <div class="col-sm-4 col-md-3 order-sm-first">
+                <h2>What Happy Campers Are Saying?</h2>
+            </div>
+            <div class="col ms-lg-5">
+                <img class="img-thumbnail img-fluid" src="img/happy-campers.jpg" alt="picture of two campers">
+            </div>
+            <div class="col">
+                <h3>So Worth It!</h3>
+                <p>"We had a blast as we embarked on a wild adventure amidst nature's embrace, where s'mores and laughter under starlit skies became our daily ritual, creating memories that will last us forever."</p>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="campsite-btn">Reserve Campsite</button>
+            </div>
+        </section>  
 
     </main>
 
