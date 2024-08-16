@@ -1,1 +1,1 @@
-Projeto de um site de acampamentos desenvolvido com o curso "Web Development Fundamentals" da plataforma Nucamp. Criado com HTML, SCSS e Bootstrap.
+Project for a camping site developed through the "Web Development Fundamentals" course on the Nucamp platform. Created with HTML, SCSS, and Bootstrap.
